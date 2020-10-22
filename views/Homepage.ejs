@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobi Hub</title>
+
+    <!-- Css links -->
+    <link rel="stylesheet" href="./css/Homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <ul>
+        <li><a><i class="fa fa-mobile-phone" style="font-size:25px;color:white;font-style: italic;"> Mobi Hub</i></a></li>
+        <li style="float:right"><a class="active" href="/login"><i class="fa fa-sign-in" style="font-style: italic; font-size:25px;color:white"> Login</i></a></li>
+    </ul>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+
+            <img src="https://demo.codezeel.com/opencart/OPC06/OPC060143/image/cache/catalog/main-banner-1-1131x498.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="https://www.212nycwireless.com/wp-content/uploads/2018/01/Banner2.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="https://hcsupermart.com/wp-content/uploads/2020/02/mobile-banner.jpg" style="width:100%">
+
+        </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div><br>
+
+
+    <div class="row">
+        <% if (products.length > 0) { %>
+            <% for (let product of products) { %>
+                <div class="column" style="margin-bottom: 2%;">
+                    <div class="card">
+                        <img src="<%= product.imagelink %>">
+                        <p>
+                            <%= product.productname %>
+                        </p>
+                        <p>
+                            <%= product.price %>
+                        </p>
+                    </div>
+                </div>
+                <% } %>
+                    <% } else { %>
+                        <h1>No Products Found!</h1>
+                        <% } %>
+    </div>
+
+
+
+
+    <!-- Js links -->
+    <script src="./js/Homepage.js">
+    </script>
+    <ul style="color: white; height: 50px;text-align: center;font-size: 20px;padding: 10px;">Thanks for visiting us</ul>
+
+</body>
+
+</html>

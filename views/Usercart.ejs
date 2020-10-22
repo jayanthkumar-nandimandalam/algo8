@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/userpage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <ul>
+        <li><a><i class="fa fa-mobile-phone"
+                    style="font-size:25px;color:white;font-style: italic;"> Mobi Hub</i></a></li>
+        <li style="float:right"><a class="active" href="/"><i class="fa fa-sign-in"
+                    style="font-style: italic; font-size:25px;color:white"> Logout</i></a></li>
+    </ul>
+
+    <div class="tab">
+        <a href="/userhome" class="tablinks">Home</a>
+        <a href="/userorders" class="tablinks">My Orders</a>
+        <a href="/cart" class="tablinks">cart</a>
+    </div>
+
+    <div id="cart" class="tabcontent">
+
+        <form action="payment" method="POST">
+            <table>
+                <tr>
+                    <th>Mobile Name</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" id="pName" name="pName" readonly></td>
+                    <td><input type="text" id="pPrice" name="price" readonly></td>
+                </tr>
+            </table><br>
+            <h2>Buyer details: </h2>
+            <input type="text" placeholder="Enter buyer name" name="name"><br>
+            <input type="tel" placeholder="Enter buyer phone number" name="mobile"><br>
+            <textarea cols="50" rows="10" placeholder="Enter delivery address" name="address"></textarea><br>
+
+
+            <script src="//checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="<%= key %>" data-amount="" data-currency="inr" data-name="Mobi hub" data-description="Brand new mobiles" data-locale="auto">
+            </script>
+        </form>
+
+    </div>
+
+    <script src="./js/userpage.js">
+    </script>
+    <script src="./js/checkout.js"></script>
+
+
+</body>
+
+</html>

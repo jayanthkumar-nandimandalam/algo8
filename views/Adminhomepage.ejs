@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/userpage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <ul>
+        <li><a><i class="fa fa-mobile-phone" style="font-size:25px;color:white;font-style: italic;"> Mobi Hub</i></a></li>
+        <li style="float:right"><a class="active" href="/"><i class="fa fa-sign-in" style="font-style: italic; font-size:25px;color:white"> Logout</i></a></li>
+    </ul>
+
+    <div class="tab">
+        <a href="/adminhome" class="tablinks">Home</a>
+        <a href="/Dailysales" class="tablinks">Daily Sales</a>
+        <a href="/userlogs" class="tablinks">Daily user Logs</a>
+    </div>
+
+    <div id="home" class="tabcontent">
+        <div class="report-card">
+            <div style="text-align:center;padding:1em 0;">
+                <h3><iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Asia%2FKolkata" width="100%" height="115" frameborder="0" seamless></iframe> </div><br> Total Sales:
+            <%= totalsales %> <br>Total Users:
+                <%= totalusers %>
+        </div>
+
+    </div>
+
+
+    <script src="./js/userpage.js">
+    </script>
+
+</body>
+
+</html>

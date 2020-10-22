@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobi Hub</title>
+    <link rel="stylesheet" href="./css/Loginpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <ul>
+        <li><a><i class="fa fa-mobile-phone" style="font-size:25px;color:white"> Mobi Hub</i></a></li>
+        <li style="float:right"><a class="active" href="/login"><i class="fa fa-sign-in" style="font-size:25px;color:white"> Login</i></a></li>
+    </ul>
+
+    <div class="login-card">
+        <font color="orangered"> Mobi Hub login</font><br>
+        <%= message%>
+            <% message="" %>
+                <br>
+                <form action="/login" method="POST">
+                    <label>Username : </label><input type="text" placeholder="Enter Username/Mobile Number" name="username" required><br>
+                    <label>Password : </label><input type="password" placeholder="Enter Password" name="password" required><br>
+                    <input type="submit" value="Login Now">
+                </form>
+                <a href="/signup">New User Register here</a>
+
+    </div>
+</body>
+
+</html>
